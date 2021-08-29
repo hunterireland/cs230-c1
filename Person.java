@@ -113,11 +113,16 @@ public class Person {
 
     /** Returns true if the Person is out of health or food, false otherwise */
     public boolean isDead() {
-        return health == 0 || food == 0;
+        return health <= 0 || food <= 0;
     }
 
     /** Returns a string containing the skill and attributes for a Person */
     public String getStatus() {
         return String.format("%s : %d %d %d", skill, health > 0 ? health : 0, food > 0 ? food : 0, shelter > 0 ? shelter : 0);
+    }
+
+    /** Returns this Person's skill attribute */
+    public Skill getSkill() {
+        return skill;
     }
 }
