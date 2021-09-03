@@ -30,10 +30,10 @@ public class Person {
                 } else {
                     if (mode == Mode.SOCIETY) {
                         for (Person p : people) {
-                            p.health += 2;
+                            p.health = p.health < 9 ? p.health + 2 : 10;
                         }
                     } else {
-                        health += 2;
+                        health = health < 9 ? health + 2 : 10;
                     }
                 }
                 break;
@@ -54,10 +54,10 @@ public class Person {
                 } else {
                     if (mode == Mode.SOCIETY) {
                         for (Person p : people) {
-                            p.shelter++;
+                            p.shelter = p.shelter < 10 ? p.shelter + 1 : 10;
                         }
                     } else {
-                        shelter += 2;
+                        shelter = shelter < 9 ? shelter + 2 : 10;
                     }
                 }
                 break;
