@@ -1,0 +1,130 @@
+******************
+* Society Simulation
+* CS230
+* 09-03-2021
+* Hunter Ireland
+******************
+
+OVERVIEW:
+
+  A simple simulation of a society to demonstrate how living
+  in a society increases likelihood of survival -- the benefits
+  outweight the costs. 
+ 
+
+INCLUDED FILES:
+ 
+ * Simulation.java - source file
+ * Person.java - source file
+ * Skill.java - source file
+ * Disaster.java - source file
+ * Mode.java - source file
+ * README - this file
+
+RUNNING:
+
+With Java installed on your machine, run the following command from the command
+line to compile the program: 
+
+    $ javac Simulation.java
+
+Run with the following command:
+
+    $ java Simulation -a/-s
+
+    Where -a will run the simulation in Anarchy mode and -s will run the 
+    simulation in society mode. 
+
+    Results will be output to the console after the society has either fallen, 
+    or survived for one year. 
+
+EXAMPLE RUN:
+
+Running in anarchy mode...
+
+
+Day 1: hurricane
+------------------------------
+DOCTOR : 10 9 7
+FARMER : 10 9 7
+CARPENTER : 10 9 7
+HUNTER : 10 11 7
+
+
+Day 2: famine
+------------------------------
+DOCTOR : 10 6 7
+FARMER : 10 6 7
+CARPENTER : 10 6 9
+HUNTER : 10 8 7
+
+
+Day 3: wolves
+------------------------------
+DOCTOR : 7 5 7
+FARMER : 7 8 7
+CARPENTER : 7 5 10
+HUNTER : 9 7 7
+
+
+Day 4: famine
+------------------------------
+DOCTOR : 9 2 7
+FARMER : 7 5 7
+CARPENTER : 7 2 10
+HUNTER : 9 4 7
+
+
+Day 5: disease
+------------------------------
+DOCTOR : 8 1 7
+FARMER : 5 4 7
+CARPENTER : 5 1 10
+HUNTER : 7 3 7
+
+
+Day 6: famine
+------------------------------
+DOCTOR : 8 0 7
+FARMER : 5 4 7
+CARPENTER : 5 0 10
+HUNTER : 7 0 7
+
+doctor is dead
+carpenter is dead
+hunter is dead
+
+
+Day 7: wolves
+------------------------------
+FARMER : 2 3 7
+
+
+Day 8: disease
+------------------------------
+FARMER : 0 2 7
+
+farmer is dead
+Everybody is dead
+
+8 days
+
+ANALYSIS: 
+
+  The average number of days survived over 100 runs:
+    Anarchy mode: 11.61 
+    Society mode: 182.06
+
+  This was a really fun programming challenge! I haven't done a whole lot
+  of programming in Java over the summer (mostly C# which is at least similar)
+  but this was a good way to get back into it. I felt like I was programming
+  a video game and seeing the results after running each simulation is really
+  gratifying. 
+
+  My results were as expected, I was actually surprised to see that sometimes 
+  in society mode they would make it the entire year! In anarchy mode, though, 
+  they die pretty quickly. Sometimes in society mode they'd get some bad luck 
+  too. Overall the program might be a little simplistic (ex. if the hunter 
+  finds food in anarchy he only gets two, but if he finds food in society
+  EVERYONE gets two) but it is a good overview of why specialization and society
+  works as a whole. Definitely preferable over anarchy!
